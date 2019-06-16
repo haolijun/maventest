@@ -61,6 +61,23 @@
       </plugin>
 
 
+      <!-- 打包jar文件时，配置manifest文件，加入lib包的jar依赖 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.App</mainClass>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+          <outputDirectory>
+            ${project.build.directory}/lib
+          </outputDirectory>
+        </configuration>
+      </plugin>
+
 
 
       <!-- 拷贝依赖的jar包到lib目录 -->
@@ -93,8 +110,6 @@
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
-
-
 
       <!-- 自定义打zip包 -->
       <plugin>
