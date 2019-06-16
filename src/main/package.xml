@@ -3,6 +3,7 @@
     <formats>
         <format>zip</format>
     </formats>
+    
     <fileSets>
         <!-- 从目标目录拷贝文件去压缩 -->
         <fileSet>
@@ -12,23 +13,6 @@
         <fileSet>
             <directory>target/config</directory>
             <outputDirectory>/config</outputDirectory>
-        </fileSet>
-
-        <!-- 从源目录拷贝文件去压缩 -->
-        <fileSet>
-            <directory>src/main/run</directory>
-            <includes>
-                <include>*.sh</include>
-                <include>*.cmd</include>
-            </includes>
-            <outputDirectory>/</outputDirectory>
-        </fileSet>
-        <fileSet>
-            <directory>src/main</directory>
-            <includes>
-                <include>ReadMe.txt</include>
-            </includes>
-            <outputDirectory>/</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>
